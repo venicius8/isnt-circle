@@ -1,0 +1,36 @@
+#container {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(192, 192, 192);
+  border-radius: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  border: 1px solid rgba(95, 95, 95, 0.5);
+  width: 20px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ball {
+  background-color: red;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  animation: ballAnimation 10s infinite alternate ease-in-out;
+  z-index: 10;
+}
+
+@keyframes ballAnimation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 480px;
+  }
+}
