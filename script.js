@@ -4,12 +4,21 @@ const inputSpeed = document.getElementById("inputSpeed");
 
 let rows = 0;
 let remainingDeg = 180;
-let delay = 10;
+let delay = 5;
 
 inputRows.addEventListener("input", () => {
   rows = inputRows.value;
   remainingDeg = 180;
   builder();
+});
+
+inputSpeed.addEventListener("input", () => {
+  document.querySelectorAll(".ball").forEach((ball, index) => {
+    ball.style.animation = `ballAnimation ${
+      100 / inputSpeed
+    }s infinite alternate ease-in-out`;
+  });
+  delay = 100 / inputSpeed.value;
 });
 
 function builder() {

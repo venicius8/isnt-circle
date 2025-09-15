@@ -22,7 +22,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   position: absolute;
-  animation: ballAnimation 10s infinite alternate ease-in-out;
+  animation: ballAnimation 5s infinite alternate ease-in-out;
   z-index: 10;
 }
 
